@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cviceni20
 {
-    class Zvire
+    internal class Zvire
     {
         public string Nazev { get; set; }
         public int Vek { get; set; }
@@ -17,7 +13,6 @@ namespace Cviceni20
             Nazev = nazev;
             Vek = vek;
             Vaha = vaha;
-
         }
 
         public void VypisPopis()

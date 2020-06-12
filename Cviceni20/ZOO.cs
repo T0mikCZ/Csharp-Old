@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cviceni20
 {
-    class ZOO
+    internal class ZOO
     {
         private List<Zvire> zvirata;
 
@@ -28,15 +26,18 @@ namespace Cviceni20
             Zvire zvire = new Zvire(nazev, vek, vaha);
 
             zvirata.Add(zvire);
-
         }
 
         public void VypisZvirat()
         {
-            Console.WriteLine("VYPIS ZVIRAT");
-            foreach(Zvire zvire in zvirata)
+            Console.WriteLine("\nVYPIS ZVIRAT \n");
+            Console.WriteLine("POCET ZVIRAT: {0}\n", zvirata.Count());
+            int i = 1;
+            foreach (Zvire zvire in zvirata)
             {
+                Console.WriteLine("{0}. Zvire", i);
                 zvire.VypisPopis();
+                i++;
             }
         }
     }

@@ -1,15 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Cviceni20
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            ZOO zoo = new ZOO();
+
+            zoo.PridatZvire();
+            zoo.PridatZvire();
+
+            zoo.VypisZvirat();
             Console.ReadKey();
         }
     }

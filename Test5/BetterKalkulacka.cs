@@ -21,6 +21,7 @@ namespace BetterKalkulacka
             //Prototyp kalkulacky s metodamy
 
             //By T0M
+            //MOVED TO ANOTHER VERSION
 
             // -----------------Verze 0.4-----------------
 

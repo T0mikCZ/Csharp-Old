@@ -15,6 +15,7 @@ namespace Animals
 
             string moznost = "";
             string zMoznost = "";
+            bool switchZooMod = false;
             do
             {
 
@@ -50,34 +51,34 @@ namespace Animals
                         {
 
                             Console.WriteLine("\nZAMESTNANCI MENU");
-                            Console.WriteLine("1. Pridat Zvire");
-                            Console.WriteLine("2. Odstranit Zvire");
-                            Console.WriteLine("3. Upravit Zvire");
-                            Console.WriteLine("4. Vypis Zvirat");
+                            Console.WriteLine("1. Pridat Zamestnance");
+                            Console.WriteLine("2. Odstranit Zamestnance");
+                            Console.WriteLine("3. Upravit Zamestnance");
+                            Console.WriteLine("4. Vypis Zamestnancu");
                             Console.WriteLine("5. Ukoncit Program");
-                            Console.WriteLine("6. Prepnout na Zamestnantsky mod");
+                            Console.WriteLine("6. Prepnout na ZOO mod");
                             Console.Write("\nVyberte si moznost: ");
                             zMoznost = Console.ReadLine();
 
                             switch (moznost)
                             {
                                 case "1":
-                                    zoo.PridatZvire();
+                                    zamestnanci.PridatZamestnance();
                                     break;
                                 case "2":
-                                    zoo.OdstranitZvire();
+                                    zamestnanci.OdstranitZamestnance();
                                     break;
                                 case "3":
-                                    zoo.UpravitZvire();
+                                    zamestnanci.UpravitZamestnance();
                                     break;
                                 case "4":
-                                    zoo.VypisZvirat();
+                                    zamestnanci.VypisZamestnancu();
                                     Console.ReadKey();
                                     break;
                                 //Case 5 je pro ukonceni  
                                 case "6":
-
                                     Console.ReadKey();
+                                    switchZooMod = true;
                                     break;
                                 default:
                                     Console.WriteLine("Spatne zadana moznost");
@@ -85,7 +86,7 @@ namespace Animals
                             }
 
                             Console.Clear();
-                        } while (moznost != "5");
+                        } while (moznost != "5" || switchZooMod == true);
                         Console.ReadKey();
                         break;
                     default:

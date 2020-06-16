@@ -14,7 +14,7 @@ namespace Animals
             zamestnanci = new List<Zamestnanec>();
         }
 
-        public void PridatZvire()
+        public void PridatZamestnance()
         {
             Console.WriteLine("PRIDANI ZAMESTNANCE\n");
             Console.Write("Zadejte jmeno zamestnance: ");
@@ -40,7 +40,7 @@ namespace Animals
             }
         }
 
-        public void OdstranitZamestannce()
+        public void OdstranitZamestnance()
         {
             int smazatIndex = VybratIndexZamestnance();
             zamestnanci.RemoveAt(smazatIndex);
@@ -48,7 +48,7 @@ namespace Animals
             Console.WriteLine("Zamestnanec smazan");
         }
 
-        public void UpravitZvire()
+        public void UpravitZamestnance()
         {
             int upravitIndex = VybratIndexZamestnance();
             string moznost = "";

@@ -55,8 +55,7 @@ namespace Animals
                             Console.WriteLine("2. Odstranit Zamestnance");
                             Console.WriteLine("3. Upravit Zamestnance");
                             Console.WriteLine("4. Vypis Zamestnancu");
-                            Console.WriteLine("5. Ukoncit Program");
-                            Console.WriteLine("6. Prepnout na ZOO mod");
+                            Console.WriteLine("5. Zmenit do ZOO menu");
                             Console.Write("\nVyberte si moznost: ");
                             zMoznost = Console.ReadLine();
 
@@ -75,18 +74,14 @@ namespace Animals
                                     zamestnanci.VypisZamestnancu();
                                     Console.ReadKey();
                                     break;
-                                //Case 5 je pro ukonceni  
-                                case "6":
-                                    switchZooMod = true;
-                                    break;
+                                //Case 5 je pro zmenu menu  
                                 default:
                                     Console.WriteLine("Spatne zadana moznost");
                                     break;
                             }
 
                             Console.Clear();
-                        } while (zMoznost != "5" || switchZooMod != true);
-                        Console.ReadKey();
+                        } while (zMoznost != "5");
                         break;
                     default:
                         Console.WriteLine("Spatne zadana moznost");

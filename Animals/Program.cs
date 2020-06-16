@@ -41,6 +41,7 @@ namespace Animals
                 }
 
                 Console.ReadKey();
+
                 Console.Clear();
             } while (moznost != "4");
 

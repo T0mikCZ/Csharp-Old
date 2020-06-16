@@ -42,7 +42,52 @@ namespace Animals
 
         public void OdstranitZvire()
         {
-            Console.WriteLine("VYPIS ZVIRAT PRO SMAZANI");
+            int smazatIndex = VybratIndexZvirete();
+            zvirata.RemoveAt(smazatIndex);
+
+            Console.WriteLine("Zvire smazano");
+        }
+
+        public void UpravaZvirete()
+        {
+            int upravitIndex = VybratIndexZvirete();
+            string moznost = "";
+            do
+            {
+
+                Console.WriteLine("Co chcete upravit?");
+                Console.WriteLine("1. JMENO");
+                Console.WriteLine("2. VEK");
+                Console.WriteLine("3. VAHU");
+                Console.WriteLine("4. UKONCIT UPRAVY");
+
+                Console.Write("\nVyberte moznost: ");
+                moznost = Console.ReadLine();
+
+                switch (moznost)
+                {
+                    case "1":
+                        zvirata[upravitIndex].Name = Console.ReadLine();
+                        break;
+                    case "2":
+                        zvirata[upravitIndex].Age = Convert.ToInt32(Console.ReadLine());
+                        break;
+                    case "3":
+                        zvirata[upravitIndex].Weight = Convert.ToDouble(Console.ReadLine());
+                        break;
+                    default:
+                        Console.WriteLine("Spatne vybrana moznost");
+                        break;
+                }
+                Console.WriteLine("Zvire upraveno");
+
+            } while (moznost != "4");
+
+        }
+
+        private int VybratIndexZvirete()
+        {
+            Console.WriteLine("VYPIS ZVIRAT");
 
             for (int i = 0; i < zvirata.Count; i++)
             {
@@ -52,12 +97,16 @@ namespace Animals
                 Console.WriteLine("     VAHA:  {0}", zvirata[i].Weight);
 
             }
-            Console.Write("NAPISTE CISLO ZVIRETE PRO SMAZANI: ");
+            Console.Write("NAPISTE CISLO ZVIRETE ");
             int vybranyIndex = Convert.ToInt32(Console.ReadLine()) - 1;
 
-            zvirata.RemoveAt(vybranyIndex);
-
-            Console.WriteLine("Zvire smazano");
+            if (vybranyIndex >= 0 && vybranyIndex < zvirata.Count)
+                return vybranyIndex;
+            else
+            {
+                Console.WriteLine("Spatne Cislo");
+                return -1;
+            }
         }
 
     }

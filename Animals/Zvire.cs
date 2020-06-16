@@ -21,7 +21,7 @@ namespace Animals
 
         public void VypisPopis()
         {
-            Console.WriteLine("VYPIS ZVIRETE");
+            Console.WriteLine("VYPIS ZVIRETE\n");
             Console.WriteLine("Name: {0}", Name);
             Console.WriteLine("Age: {0}", Age);
             Console.WriteLine("Weight: {0}", Weight);

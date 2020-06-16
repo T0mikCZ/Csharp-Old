@@ -40,7 +40,7 @@ namespace Animals
                         break;
                 }
 
-                Console.Clear;
+                Console.Clear();
             } while (moznost != "4");
 
         }

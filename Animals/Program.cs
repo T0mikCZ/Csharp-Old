@@ -10,9 +10,11 @@ namespace Animals
     {
         static void Main(string[] args)
         {
-            ZOO zoo = new ZOO();
-            string moznost = "";
+            ZOO  zoo = new ZOO();
+            Zamestnanci zamestnanci = new Zamestnanci();
 
+            string moznost = "";
+            string zMoznost = "";
             do
             {
 
@@ -43,7 +45,7 @@ namespace Animals
                         break;
                   //Case 5 je pro ukonceni  
                     case "6":
-                        zoo.VypisZvirat();
+
                         Console.ReadKey();
                         break;
                     default:

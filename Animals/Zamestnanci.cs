@@ -16,14 +16,14 @@ namespace Animals
 
         public void PridatZvire()
         {
-            Console.WriteLine("PRIDANI ZVIRETE\n");
-            Console.Write("Zadejte jmeno zvirete: ");
+            Console.WriteLine("PRIDANI ZAMESTNANCE\n");
+            Console.Write("Zadejte jmeno zamestnance: ");
             string name = Console.ReadLine();
 
-            Console.Write("Zadejte vek zvirete: ");
+            Console.Write("Zadejte vek zamestnance: ");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Zadejte vahu zvirete: ");
+            Console.Write("Zadejte mzdu zamestnance: ");
             decimal wage = Convert.ToDecimal(Console.ReadLine());
 
             Zamestnanec zamestnanec = new Zamestnanec(name, age, wage);
@@ -31,26 +31,26 @@ namespace Animals
             zamestnanci.Add(zamestnanec);
         }
 
-        public void VypisZvirat()
+        public void VypisZamestnancu()
         {
-            Console.WriteLine("\nVYPIS ZVIRAT\n");
+            Console.WriteLine("\nVYPIS ZAMESTNANCU\n");
             foreach (Zamestnanec zamestnanec in zamestnanci)
             {
                 zamestnanec.VypisPopis();
             }
         }
 
-        public void OdstranitZvire()
+        public void OdstranitZamestannce()
         {
-            int smazatIndex = VybratIndexZvirete();
+            int smazatIndex = VybratIndexZamestnance();
             zamestnanci.RemoveAt(smazatIndex);
 
-            Console.WriteLine("Zvire smazano");
+            Console.WriteLine("Zamestnanec smazan");
         }
 
         public void UpravitZvire()
         {
-            int upravitIndex = VybratIndexZvirete();
+            int upravitIndex = VybratIndexZamestnance();
             string moznost = "";
             do
             {
@@ -58,7 +58,7 @@ namespace Animals
                 Console.WriteLine("Co chcete upravit?");
                 Console.WriteLine("1. JMENO");
                 Console.WriteLine("2. VEK");
-                Console.WriteLine("3. VAHU");
+                Console.WriteLine("3. Mzdu");
                 Console.WriteLine("4. UKONCIT UPRAVY");
 
                 Console.Write("\nVyberte moznost: ");
@@ -79,24 +79,25 @@ namespace Animals
                         zamestnanci[upravitIndex].Wage = Convert.ToDecimal(Console.ReadLine());
                         break;
                 }
-                Console.WriteLine("Zvire upraveno");
+                Console.WriteLine("Zamestnanec upraven");
 
             } while (moznost != "4");
 
         }
 
-        private int VybratIndexZvirete()
+        private int VybratIndexZamestnance()
         {
-            Console.WriteLine("VYPIS ZVIRAT");
+            Console.WriteLine("VYPIS ZAMESTNANCU");
 
             for (int i = 0; i < zamestnanci.Count; i++)
             {
-                Console.WriteLine("{0}. zvire: ", i + 1);
-                Console.WriteLine("     JMENO: {0}", zamestnanci[i].Name);
-                Console.WriteLine("     VEK:   {0}", zamestnanci[i].Age);
+                Console.WriteLine("{0}. zamestnanec: ", i + 1);
+                Console.WriteLine("           JMENO: {0}", zamestnanci[i].Name);
+                Console.WriteLine("           VEK:   {0}", zamestnanci[i].Age);
+                Console.WriteLine("           MZDA:  {0}", zamestnanci[i].Wage);
 
             }
-            Console.Write("NAPISTE CISLO ZVIRETE ");
+            Console.Write("NAPISTE CISLO ZAMESTNANCE ");
             int vybranyIndex = Convert.ToInt32(Console.ReadLine()) - 1;
 
             if (vybranyIndex >= 0 && vybranyIndex < zamestnanci.Count)

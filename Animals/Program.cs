@@ -21,7 +21,7 @@ namespace Animals
                 Console.WriteLine("2. Odstranit Zvire");
                 Console.WriteLine("3. Vypis Zvirat");
                 Console.WriteLine("4. Ukoncit Program");
-                Console.WriteLine("Vyberte si moznost: \n");
+                Console.Write("\nVyberte si moznost: ");
                 moznost = Console.ReadLine();
 
                 switch (moznost)

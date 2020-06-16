@@ -22,6 +22,7 @@ namespace Animals
                 Console.WriteLine("3. Upravit Zvire");
                 Console.WriteLine("4. Vypis Zvirat");
                 Console.WriteLine("5. Ukoncit Program");
+                Console.WriteLine("6. Prepnout na Zamestnantsky mod");
                 Console.Write("\nVyberte si moznost: ");
                 moznost = Console.ReadLine();
 
@@ -37,6 +38,11 @@ namespace Animals
                         zoo.UpravitZvire();
                         break;
                     case "4":
+                        zoo.VypisZvirat();
+                        Console.ReadKey();
+                        break;
+                  //Case 5 je pro ukonceni  
+                    case "6":
                         zoo.VypisZvirat();
                         Console.ReadKey();
                         break;

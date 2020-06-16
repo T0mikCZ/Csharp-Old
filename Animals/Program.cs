@@ -60,7 +60,7 @@ namespace Animals
                             Console.Write("\nVyberte si moznost: ");
                             zMoznost = Console.ReadLine();
 
-                            switch (moznost)
+                            switch (zMoznost)
                             {
                                 case "1":
                                     zamestnanci.PridatZamestnance();

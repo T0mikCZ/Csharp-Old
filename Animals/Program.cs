@@ -16,7 +16,7 @@ namespace Animals
             do
             {
 
-                Console.WriteLine("ZOO MENU");
+                Console.WriteLine("\nZOO MENU");
                 Console.WriteLine("1. Pridat Zvire");
                 Console.WriteLine("2. Odstranit Zvire");
                 Console.WriteLine("3. Vypis Zvirat");
@@ -40,9 +40,8 @@ namespace Animals
                         break;
                 }
 
+                Console.Clear
             } while (moznost != "4");
-
-            Console.ReadKey();
 
         }
     }

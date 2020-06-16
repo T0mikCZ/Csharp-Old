@@ -38,13 +38,12 @@ namespace Animals
                         break;
                     case "4":
                         zoo.VypisZvirat();
+                        Console.ReadKey();
                         break;
                     default:
                         Console.WriteLine("Spatne zadana moznost");
                         break;
                 }
-
-                Console.ReadKey();
 
                 Console.Clear();
             } while (moznost != "5");

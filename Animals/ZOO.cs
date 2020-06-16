@@ -48,7 +48,7 @@ namespace Animals
             Console.WriteLine("Zvire smazano");
         }
 
-        public void UpravaZvirete()
+        public void UpravitZvire()
         {
             int upravitIndex = VybratIndexZvirete();
             string moznost = "";
@@ -67,16 +67,16 @@ namespace Animals
                 switch (moznost)
                 {
                     case "1":
+                        Console.Write("Upravit Jmeno: ");
                         zvirata[upravitIndex].Name = Console.ReadLine();
                         break;
                     case "2":
+                        Console.Write("Upravit Vek: ");
                         zvirata[upravitIndex].Age = Convert.ToInt32(Console.ReadLine());
                         break;
                     case "3":
+                        Console.Write("Upravit Vahu: ");
                         zvirata[upravitIndex].Weight = Convert.ToDouble(Console.ReadLine());
-                        break;
-                    default:
-                        Console.WriteLine("Spatne vybrana moznost");
                         break;
                 }
                 Console.WriteLine("Zvire upraveno");

@@ -19,8 +19,9 @@ namespace Animals
                 Console.WriteLine("\nZOO MENU");
                 Console.WriteLine("1. Pridat Zvire");
                 Console.WriteLine("2. Odstranit Zvire");
-                Console.WriteLine("3. Vypis Zvirat");
-                Console.WriteLine("4. Ukoncit Program");
+                Console.WriteLine("3. Upravit Zvire");
+                Console.WriteLine("4. Vypis Zvirat");
+                Console.WriteLine("5. Ukoncit Program");
                 Console.Write("\nVyberte si moznost: ");
                 moznost = Console.ReadLine();
 
@@ -33,6 +34,9 @@ namespace Animals
                         zoo.OdstranitZvire();
                         break;
                     case "3":
+                        zoo.UpravitZvire();
+                        break;
+                    case "4":
                         zoo.VypisZvirat();
                         break;
                     default:
@@ -43,7 +47,7 @@ namespace Animals
                 Console.ReadKey();
 
                 Console.Clear();
-            } while (moznost != "4");
+            } while (moznost != "5");
 
         }
     }

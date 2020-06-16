@@ -16,7 +16,7 @@ namespace Animals
         {
             Name = name;
             Age = age;
-            Wage = wage
+            Wage = wage;
         }
 
         public void VypisPopis()
@@ -24,6 +24,7 @@ namespace Animals
             Console.WriteLine("\nVYPIS ZAMESTANCE\n");
             Console.WriteLine("Name: {0}", Name);
             Console.WriteLine("Age: {0}", Age);
+            Console.WriteLine("Wage: {0}", Wage);
         }
     }
 }

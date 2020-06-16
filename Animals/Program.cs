@@ -15,7 +15,6 @@ namespace Animals
 
             string moznost = "";
             string zMoznost = "";
-            bool switchZooMod = false;
             do
             {
 
@@ -26,6 +25,8 @@ namespace Animals
                 Console.WriteLine("4. Vypis Zvirat");
                 Console.WriteLine("5. Ukoncit Program");
                 Console.WriteLine("6. Prepnout na Zamestnantsky mod");
+                Console.WriteLine("7. Hledat zvirata podle jmena");
+                Console.WriteLine("8. Pocet zvirat");
                 Console.Write("\nVyberte si moznost: ");
                 moznost = Console.ReadLine();
 
@@ -56,6 +57,8 @@ namespace Animals
                             Console.WriteLine("3. Upravit Zamestnance");
                             Console.WriteLine("4. Vypis Zamestnancu");
                             Console.WriteLine("5. Zmenit do ZOO menu");
+                            Console.WriteLine("6. Pocet Zamestnancu");
+                            Console.WriteLine("7. Vypis Prumer mzdy vsech zamestnancu");
                             Console.Write("\nVyberte si moznost: ");
                             zMoznost = Console.ReadLine();
 
@@ -75,6 +78,14 @@ namespace Animals
                                     Console.ReadKey();
                                     break;
                                 //Case 5 je pro zmenu menu  
+                                case "6":
+                                    zamestnanci.PocetZamestnancu();
+                                    Console.ReadKey();
+                                    break;
+                                case "7":
+                                    Console.WriteLine("Prumer Mezd: {0}",zamestnanci.PrumerMezd());
+                                    Console.ReadKey();
+                                    break;
                                 default:
                                     Console.WriteLine("Spatne zadana moznost");
                                     break;
@@ -82,6 +93,13 @@ namespace Animals
 
                             Console.Clear();
                         } while (zMoznost != "5");
+                        break;
+                    case "7":
+                        zoo.HledatZvire();
+                        break;
+                    case "8":
+                        zoo.PocetZvirat();
+                        Console.ReadKey();
                         break;
                     default:
                         Console.WriteLine("Spatne zadana moznost");

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -83,6 +84,27 @@ namespace Animals
 
             } while (moznost != "4");
 
+        }
+        public void PocetZamestnancu()
+        {
+            Console.WriteLine("\nPOCET ZAMESTNANCU\n");
+
+            Console.WriteLine("Pocet Zamestnancu: {0}", zamestnanci.Count);
+        }
+
+        public decimal PrumerMezd()
+        {
+            decimal soucet = 0;
+
+            foreach (Zamestnanec zamestnanec in zamestnanci)
+            {
+                soucet += zamestnanec.Wage;
+            }
+
+            if (zamestnanci.Count != 0)
+                return soucet / zamestnanci.Count;
+            else
+                return -1;
         }
 
         private int VybratIndexZamestnance()

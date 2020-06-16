@@ -85,6 +85,30 @@ namespace Animals
 
         }
 
+        public void HledatZvire()
+        {
+
+            Console.WriteLine("\nHLEDANI ZVIRAT\n");
+            Console.Write("Napiste pismeno nebo slovo podle ktereho chcete hledat: ");
+            string vysledekHledani = Console.ReadLine();
+
+            foreach (Zvire zvire in zvirata)
+            {
+                if (zvire.Name.ToLower().Contains(vysledekHledani.ToLower()))
+                {
+                    zvire.VypisPopis();
+                }
+            }
+            Console.ReadKey();
+
+        }
+        public void PocetZvirat()
+        {
+            Console.WriteLine("\nPOCET ZVIRAT\n");
+
+            Console.WriteLine("Pocet Zvirat: {0}", zvirata.Count);
+        }
+
         private int VybratIndexZvirete()
         {
             Console.WriteLine("VYPIS ZVIRAT");

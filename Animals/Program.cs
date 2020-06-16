@@ -77,7 +77,6 @@ namespace Animals
                                     break;
                                 //Case 5 je pro ukonceni  
                                 case "6":
-                                    Console.ReadKey();
                                     switchZooMod = true;
                                     break;
                                 default:
@@ -86,7 +85,7 @@ namespace Animals
                             }
 
                             Console.Clear();
-                        } while (moznost != "5" || switchZooMod == true);
+                        } while (zMoznost != "5" || switchZooMod != true);
                         Console.ReadKey();
                         break;
                     default:

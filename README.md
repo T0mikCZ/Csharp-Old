@@ -1,2 +1,2 @@
 # 1Program
-My collection of early programs i made
+Kolekce programu z roku 2019, ktere jsem delal kdyz jsem poprve zacinal programovat
